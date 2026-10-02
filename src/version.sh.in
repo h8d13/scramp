@@ -1,0 +1,3 @@
+# plain stamp: fixed at build time, cannot be overridden
+# no shebang, so the stamped file is not executable directly
+VERSION=@PACKAGE_VERSION@

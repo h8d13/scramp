@@ -1,0 +1,4 @@
+# stamped defaults, overridable from the environment
+# e.g. PREFIX=/opt/x ./hello
+PREFIX=${PREFIX:-@prefix@}
+SYSCONFDIR=${SYSCONFDIR:-@sysconfdir@}

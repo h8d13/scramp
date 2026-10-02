@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# has a shebang, so it is stamped executable
+# resolve symlinks (e.g. one added by a packager) to find the sibling files:
+# readlink is the only external call needed, ${here%/*} replaces dirname
+here=$(readlink -f -- "${BASH_SOURCE[0]}")
+here=${here%/*}
+. "$here/version.sh"
+. "$here/paths.sh"
+echo "@PACKAGE_NAME@ $VERSION, config in $SYSCONFDIR, installed to $PREFIX"
