@@ -1,6 +1,6 @@
 # Scramp
 
-a simple *.in stamper to package scripts
+a simple `*.in` stamper to package scripts
 
 there are only 2 rules:
 
@@ -13,3 +13,9 @@ there are only 2 rules:
 So you'd write code in `src/`, stamp vars/consts with `@something@`
 
 Finally `declare` them in `buildit.sh`.
+
+```shell
+# usage: ./buildit.sh [dir...]   (stamps dir/*.in into $outdir, default: src)
+./buildit.sh src
+# output goes to $BUILDDIR/<name>-<version>/ (default BUILDDIR: .)
+```
